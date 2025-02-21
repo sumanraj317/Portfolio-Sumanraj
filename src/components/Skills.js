@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGit, FaDatabase, FaFire, FaMicrosoft, FaAws, FaCloud, FaEthereum } from 'react-icons/fa';
-import { SiSolidity } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGit, FaDatabase, FaFire, FaMicrosoft, FaAws, FaEthereum } from 'react-icons/fa';
+import { SiSolidity, SiExpress } from 'react-icons/si';
 
 const skills = [
   { name: 'HTML5', icon: <FaHtml5 />, color: 'text-red-500' },
@@ -9,10 +9,10 @@ const skills = [
   { name: 'React.js', icon: <FaReact />, color: 'text-blue-400' },
   { name: 'MongoDB', icon: <FaDatabase />, color: 'text-green-500' },
   { name: 'Node.js', icon: <FaNodeJs />, color: 'text-green-600' },
+  { name: 'Express.js', icon: <SiExpress />, color: 'text-gray-500' },
   { name: 'Firebase', icon: <FaFire />, color: 'text-orange-500' },
   { name: 'Git', icon: <FaGit />, color: 'text-red-600' },
-  { name: '.NET Core MVC', icon: <FaMicrosoft />, color: 'text-blue-700' },
-  { name: 'Azure', icon: <FaCloud />, color: 'text-blue-600' }, 
+  { name: '.NET Core MVC', icon: <FaMicrosoft />, color: 'text-blue-700' }, 
   { name: 'AWS', icon: <FaAws />, color: 'text-orange-400' },
   { name: 'Solidity', icon: <SiSolidity />, color: 'text-gray-500' },
   { name: 'Ethereum', icon: <FaEthereum />, color: 'text-gray-700' },
