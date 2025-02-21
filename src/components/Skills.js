@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGit, FaDatabase, FaFire, FaMicrosoft, FaAws, FaCloud } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGit, FaDatabase, FaFire, FaMicrosoft, FaAws, FaCloud, FaEthereum } from 'react-icons/fa';
+import { SiSolidity } from 'react-icons/si';
 
 const skills = [
   { name: 'HTML5', icon: <FaHtml5 />, color: 'text-red-500' },
@@ -12,7 +13,10 @@ const skills = [
   { name: 'Git', icon: <FaGit />, color: 'text-red-600' },
   { name: '.NET Core MVC', icon: <FaMicrosoft />, color: 'text-blue-700' },
   { name: 'Azure', icon: <FaCloud />, color: 'text-blue-600' }, 
-  { name: 'AWS', icon: <FaAws />, color: 'text-orange-400' }, 
+  { name: 'AWS', icon: <FaAws />, color: 'text-orange-400' },
+  { name: 'Solidity', icon: <SiSolidity />, color: 'text-gray-500' },
+  { name: 'Ethereum', icon: <FaEthereum />, color: 'text-gray-700' },
+  { name: 'Smart Contracts', icon: <FaEthereum />, color: 'text-gray-700' }, 
 ];
 
 const Skills = () => {
