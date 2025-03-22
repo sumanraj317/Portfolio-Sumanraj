@@ -7,10 +7,10 @@ const Hero = () => {
       className="relative h-screen bg-cover bg-center flex items-center justify-center md:justify-start px-6 md:px-10" 
       style={{ backgroundImage: `url(${bg1})` }}
     >
-      {/* Overlay */}
+      
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
       
-      {/* Content */}
+      
       <div className="relative z-10 max-w-3xl text-white text-center md:text-left animate-fade-in">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-cyan-400 drop-shadow-lg animate-glow">
           Welcome to <span className="text-yellow-300">My Portfolio</span>

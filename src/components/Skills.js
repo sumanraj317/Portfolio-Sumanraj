@@ -35,7 +35,7 @@ const skills = [
 const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-black text-white relative overflow-hidden">
-      {/* Background Glow Animation */}
+      
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 opacity-30 blur-3xl"
         animate={{ y: [0, 50, 0] }}

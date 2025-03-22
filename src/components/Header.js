@@ -7,12 +7,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 backdrop-blur-3xl bg-gradient-to-r from-purple-800/20 via-indigo-700/15 to-blue-500/20 text-white py-4 shadow-lg transition-all duration-500 border-b border-gray-300/10">
       <div className="container mx-auto flex justify-between items-center px-6 md:px-8">
-        {/* Logo */}
+        
         <h1 className="text-4xl font-extrabold tracking-wider drop-shadow-lg animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
           Hello
         </h1>
 
-        {/* Desktop Navigation */}
+       
         <nav className="hidden md:flex">
           <ul className="flex space-x-6 text-lg font-medium">
             {["About", "Skills", "Projects", "Services", "Why Me?", "Contact"].map((item, index) => (
@@ -29,7 +29,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        
         <button
           className="md:hidden text-white text-2xl focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -38,7 +38,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      
       {isOpen && (
         <nav className="md:hidden absolute top-full left-0 w-full bg-black bg-opacity-80 backdrop-blur-lg py-5 transition-all duration-500">
           <ul className="flex flex-col items-center space-y-4 text-lg font-medium">
