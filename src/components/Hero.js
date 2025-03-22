@@ -1,27 +1,31 @@
 import React from 'react';
-import bg1 from '../assets/bg1.png'; 
+import bg1 from '../assets/bg1.png';
 
 const Hero = () => {
   return (
     <section 
-      className="relative h-screen bg-cover bg-center" 
+      className="relative h-screen bg-cover bg-center flex items-center justify-center md:justify-start px-6 md:px-10" 
       style={{ backgroundImage: `url(${bg1})` }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start pl-10">
-        <div className="text-left text-white px-5 max-w-lg animate-fade-in">
-          <h1 className="text-6xl font-bold mb-4 text-indigo-400 animate-pulse">
-            Welcome to <span className="text-yellow-300">My Portfolio</span>
-          </h1>
-          <p className="text-xl mb-8 text-gray-200 animate-slide-in">
-            I'm <span className="text-teal-300">Suman Raj</span>, a passionate Full Stack Developer. I love creating dynamic and responsive web applications using modern technologies.
-          </p>
-          <a 
-            href="#about" 
-            className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transform transition duration-300"
-          >
-            Learn More About Me
-          </a>
-        </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-3xl text-white text-center md:text-left animate-fade-in">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-cyan-400 drop-shadow-lg animate-glow">
+          Welcome to <span className="text-yellow-300">My Portfolio</span>
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl mb-6 text-gray-300 animate-slide-in leading-relaxed">
+          I'm <span className="text-purple-400 font-semibold">Suman Raj</span>, a MERN Stack Developer <br className="hidden sm:block"/> 
+          with a passion for <span className="text-teal-300">Blockchain Technology</span>. <br className="hidden sm:block"/>
+          Creating decentralized and futuristic web applications.
+        </p>
+        <a 
+          href="#about" 
+          className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:scale-105 hover:shadow-indigo-500 transform transition duration-300"
+        >
+          Learn More About Me
+        </a>
       </div>
     </section>
   );

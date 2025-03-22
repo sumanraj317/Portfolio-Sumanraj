@@ -1,28 +1,63 @@
-
-import React from 'react';
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="bg-gradient-to-r from-purple-500 to-blue-500 text-white py-4 sticky top-0 shadow-lg z-50">
-      <div className="container mx-auto flex justify-between items-center px-4">
-        <h1 className="text-3xl font-bold animate-bounce">
-          <span role="img" aria-label="wave">👋</span> Welcome!
+    <header className="fixed top-0 w-full z-50 backdrop-blur-3xl bg-gradient-to-r from-purple-800/20 via-indigo-700/15 to-blue-500/20 text-white py-4 shadow-lg transition-all duration-500 border-b border-gray-300/10">
+      <div className="container mx-auto flex justify-between items-center px-6 md:px-8">
+        {/* Logo */}
+        <h1 className="text-4xl font-extrabold tracking-wider drop-shadow-lg animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
+          Hello
         </h1>
-        <nav>
-          <ul className="flex space-x-4">
-            
-            <li><a href="#about" className="hover:text-gray-200 transition-colors duration-300"><span role="img" aria-label="person">👤</span> About</a></li>
-            <li><a href="#skills" className="hover:text-gray-200 transition-colors duration-300"><span role="img" aria-label="tools">🛠</span> Skills</a></li>
-            <li><a href="#projects" className="hover:text-gray-200 transition-colors duration-300"><span role="img" aria-label="project">📁</span> Projects</a></li>
-            <li><a href="#services" className="hover:text-gray-200 transition-colors duration-300"><span role="img" aria-label="service">💼</span> Services</a></li>
-            <li><a href="#why-choose-me" className="hover:text-gray-200 transition-colors duration-300"><span role="img" aria-label="question">❓</span> Why Choose Me</a></li>
-            <li><a href="#select-me" className="hover:text-gray-200 transition-colors duration-300"><span role="img" aria-label="select">✅</span> Select Me</a></li>
-            
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex">
+          <ul className="flex space-x-6 text-lg font-medium">
+            {["About", "Skills", "Projects", "Services", "Why Me?", "Contact"].map((item, index) => (
+              <li key={index}>
+                <a
+                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="relative group transition duration-300 hover:text-yellow-300"
+                >
+                  {item}
+                  <span className="absolute left-1/2 -bottom-1 w-0 h-1 bg-yellow-300 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-white text-2xl focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <nav className="md:hidden absolute top-full left-0 w-full bg-black bg-opacity-80 backdrop-blur-lg py-5 transition-all duration-500">
+          <ul className="flex flex-col items-center space-y-4 text-lg font-medium">
+            {["About", "Skills", "Projects", "Services", "Why Me?", "Contact"].map((item, index) => (
+              <li key={index}>
+                <a
+                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="transition duration-300 hover:text-yellow-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
-}
+};
 
 export default Header;

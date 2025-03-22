@@ -21,6 +21,24 @@ const About = () => {
           <p className="text-lg leading-relaxed text-gray-600 mt-4">
             With a keen eye for detail and a commitment to quality, I take pride in delivering projects that are not only technically robust but also visually appealing and optimized for performance. Whether it’s developing a dynamic frontend interface or integrating seamless backend functionality, I bring creativity, precision, and efficiency to every line of code.
           </p>
+          
+          <p className="text-2xl font-semibold text-black mt-6 leading-9 tracking-wide animate-fade-in delay-200">
+  I craft  
+  <span className="bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-transparent bg-clip-text font-extrabold animate-pulse">
+    {" "}sleek, secure, and high-performance{" "}
+  </span>  
+  web solutions with a keen eye for detail. Passionate about  
+  <span className="text-purple-500 font-bold drop-shadow-xl transition-all duration-300 hover:scale-110 hover:text-pink-400 animate-bounce-once">
+    {" "}AI-driven automation{" "}
+  </span>  
+  and  
+  <span className="text-blue-500 font-bold drop-shadow-xl transition-all duration-300 hover:scale-110 hover:text-cyan-400 animate-bounce-once">
+    {" "}blockchain smart contracts{" "}
+  </span>  
+  for real-world impact.
+</p>
+
+
           <p className="text-lg leading-relaxed text-gray-600 mt-4">
             I thrive in agile environments, collaborating closely with teams and clients to adapt quickly to changing requirements and ensure timely delivery of high-quality solutions. My expertise extends to working with cutting-edge technologies, problem-solving, and building scalable solutions from the ground up.
           </p>
